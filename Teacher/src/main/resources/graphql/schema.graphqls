@@ -1,0 +1,46 @@
+type Teacher{
+
+    id: ID
+    fullName: String
+    age: Int
+    gender: String
+    jobTitle : String
+    university : String
+    createdAt : String
+    image: String
+    email:String
+    password:String
+    phoneNumber:String
+    role:String
+    courses : []
+}
+
+type Query {
+    getTeacherById(id: ID): Teacher
+    findByEmail(email: String): TeacherInfo
+    getAllTeacher :[Teacher]
+    getTeacherByEmail(email:String):Teacher
+}
+
+type TeacherInfo {
+    email: String
+    password: String
+    scope: String
+}
+
+type Mutation {
+    saveStudent(
+        fullName: String,
+        age: Int,
+        gender: String,
+        email: String,
+        password: String,
+        phone: String,
+
+
+
+    ): Student
+
+
+}
+
